@@ -283,7 +283,6 @@ import org.robolectric.shadows.ShadowNumberPicker;
 import org.robolectric.shadows.ShadowObjectAnimator;
 import org.robolectric.shadows.ShadowPaint;
 import org.robolectric.shadows.ShadowParcel;
-import org.robolectric.shadows.ShadowPasswordTransformationMethod;
 import org.robolectric.shadows.ShadowPath;
 import org.robolectric.shadows.ShadowPendingIntent;
 import org.robolectric.shadows.ShadowPhoneNumberUtils;
@@ -831,10 +830,6 @@ public class Robolectric {
 
     public static ShadowParcel shadowOf(Parcel instance) {
         return (ShadowParcel) shadowOf_(instance);
-    }
-
-    public static ShadowPasswordTransformationMethod shadowOf(PasswordTransformationMethod instance) {
-        return (ShadowPasswordTransformationMethod) shadowOf_(instance);
     }
 
     public static ShadowPath shadowOf(Path instance) {
