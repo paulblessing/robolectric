@@ -1,7 +1,5 @@
 package org.robolectric;
 
-import android.widget.HeaderViewListAdapter;
-import org.robolectric.internal.Implements;
 import org.robolectric.shadows.ShadowAbsListView;
 import org.robolectric.shadows.ShadowAbsSeekBar;
 import org.robolectric.shadows.ShadowAbsSpinner;
@@ -371,7 +369,6 @@ public class RobolectricBase {
             ShadowGridView.class,
             ShadowHandler.class,
             ShadowHandlerThread.class,
-            ShadowHeaderViewListAdapter.class,
             ShadowImageButton.class,
             ShadowImageView.class,
             ShadowInputMethodManager.class,
@@ -536,8 +533,4 @@ public class RobolectricBase {
             ShadowWindow.class,
             ShadowZoomButtonsController.class
     ));
-
-    @Implements(value = HeaderViewListAdapter.class, callThroughByDefault = true)
-    public static class ShadowHeaderViewListAdapter {
-    }
 }
