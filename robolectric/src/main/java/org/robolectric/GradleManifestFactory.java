@@ -52,7 +52,9 @@ import java.io.File;
       assets = FileFsFile.from(buildOutputDir, "bundles", flavor, type, "assets");
     }
 
-    if (FileFsFile.from(buildOutputDir, "manifests").exists()) {
+    if (FileFsFile.from(buildOutputDir, "manifests", "aapt").exists()) {
+      manifest = FileFsFile.from(buildOutputDir, "manifests", "aapt", flavor, abiSplit, type, DEFAULT_MANIFEST_NAME);
+    } else if (FileFsFile.from(buildOutputDir, "manifests").exists()) {
       manifest = FileFsFile.from(buildOutputDir, "manifests", "full", flavor, abiSplit, type, DEFAULT_MANIFEST_NAME);
     } else {
       manifest = FileFsFile.from(buildOutputDir, "bundles", flavor, abiSplit, type, DEFAULT_MANIFEST_NAME);
